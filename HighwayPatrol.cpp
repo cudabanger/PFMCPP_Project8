@@ -1,7 +1,14 @@
 #include "HighwayPatrol.h"
 #include <iostream>
+#include "Highway.h"
 
 HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
+{
+
+}
+
+// I need one out-of-line virtual function definition to avoid weak vtables warning
+HighwayPatrol::~HighwayPatrol()
 {
 
 }
