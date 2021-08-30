@@ -3,7 +3,7 @@
 #include "Vehicle.h"
 
 struct Highway;
-struct HighwayPatrol : public Vehicle 
+struct HighwayPatrol : Vehicle 
 {
     HighwayPatrol();
     HighwayPatrol(const HighwayPatrol&) = default;

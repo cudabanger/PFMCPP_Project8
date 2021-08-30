@@ -27,14 +27,12 @@ void Highway::addVehicleInternal(Vehicle* v)
     {
         car->closeWindows();
     }
-
-    if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v))
+    else if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v))
     {
         // the member function that doesn't evade the cops
         bike->lanesplitAndRace(speedLimit);
     }
-
-    if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
+    else if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
     {
         truck->setSpeed(speedLimit);
     }
@@ -53,15 +51,13 @@ void Highway::removeVehicleInternal(Vehicle* v)
     {
         v->tryToEvade();
     }
-
-    if (Motorcycle* bike = dynamic_cast<Motorcycle*>(v))
+    else if (Motorcycle* bike = dynamic_cast<Motorcycle*>(v))
     {
         bike->tryToEvade();
     }
-
-    if (SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
+    else if (SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
     {
-        truck->tryToEvade();
+        truck->pullOver();
     }
 }
 
