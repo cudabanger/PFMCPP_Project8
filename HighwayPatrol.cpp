@@ -20,7 +20,6 @@ void HighwayPatrol::scanHighway(Highway* h)
     for( size_t i = h->vehicles.size(); i-- > 0; )
     {
         auto* v = h->vehicles[i];
-        std::cout << v->name << "'s speed: " << v->speed << std::endl;
         if( v->speed > h->speedLimit + 5 )
         {
             pullOver(v, v->speed > (h->speedLimit + 15), h );
