@@ -16,5 +16,6 @@ void SemiTruck::pullOver()
 
 void SemiTruck::getOnHighway(int speed)
 {
+    std::cout << name << " is getting on the highway." << std::endl;
     Vehicle::setSpeed(speed);    
 }
