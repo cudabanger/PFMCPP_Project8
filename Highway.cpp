@@ -30,7 +30,7 @@ void Highway::addVehicleInternal(Vehicle* v)
     else if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v))
     {
         // the member function that doesn't evade the cops
-        bike->lanesplitAndRace(90);
+        bike->lanesplitAndRace();
     }
     else if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v))
     {
